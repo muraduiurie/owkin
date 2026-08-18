@@ -1,0 +1,16 @@
+server:
+  host: 0.0.0.0
+  port: 8000
+
+debug: false
+
+scanner:
+  # our own mock endpoint, point SCANNER__URL at a real tool to swap it out
+  url: http://localhost:8000/mock/scan
+  timeout: 10
+
+docker:
+  repository: owkin-job
+  run_timeout: 600
+  # when the service runs in a container, mount this exact path from the host
+  data_dir: /tmp/owkin
